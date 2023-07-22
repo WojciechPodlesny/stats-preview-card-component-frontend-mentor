@@ -1,0 +1,118 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+
+}
+
+body {
+  font-family: "Inter", sans-serif;
+  font-family: 'Lexend Deca', sans-serif;
+  font-size: 15px;
+}
+
+.wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100vw;
+  height: 100vh;
+  background: hsl(233, 47%, 7%);
+  color: white;
+
+}
+
+.card {
+  display: flex;
+  width: 70vw;
+  background: hsl(244, 38%, 16%);
+  border-radius: 7px;
+
+}
+
+.card .description {
+  padding: 4rem;
+  width: 50%;
+}
+
+.card .description h1 {
+  font-size: 30px;
+}
+
+.card .description h1 span {
+  font-size: 30px;
+  font-weight: 700;
+  color: hsl(277, 64%, 61%);
+
+}
+
+.card .description p {
+  margin: 1.5rem 0 3rem 0;
+  color: hsla(0, 0%, 100%, 0.75);
+
+}
+
+.card .stats {
+  display: flex;
+  justify-content: space-between;
+}
+
+.card .stats .number {
+  font-size: 13px;
+  font-weight: 700;
+}
+
+.card .stats .name {
+  font-size: 10px;
+  text-transform: uppercase;
+  letter-spacing: 1.5px;
+  color: hsla(0, 0%, 100%, 0.6);
+
+}
+
+.card .card_img {
+  width: 50%;
+  background: linear-gradient(0deg,
+      hsla(277, 64%, 61%, 0.5) 0%,
+      hsla(277, 64%, 61%, 0.5) 100%),
+    url('../images/image-header-desktop.jpg');
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  border-radius: 0 7px 7px 0;
+}
+
+@media (max-width:375px) {
+  .card {
+    flex-direction: column-reverse;
+    justify-content: space-between;
+    width: 90vw;
+    height: 90vh;
+  }
+
+  .card .description {
+    padding: 15px;
+    width: auto;
+    height: 70%;
+    text-align: center;
+  }
+
+  .card .card_img {
+    height: 40%;
+    width: 100%;
+    background: linear-gradient(0deg,
+        hsla(277, 64%, 61%, 0.5) 0%,
+        hsla(277, 64%, 61%, 0.5) 100%),
+      url('../images/image-header-mobile.jpg');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    border-radius: 0 7px 7px 0;
+  }
+
+  .card .stats .companies,
+  .card .stats .templates,
+  .card .stats .queries {
+    margin-bottom: 2rem;
+  }
+}
